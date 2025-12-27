@@ -8,6 +8,7 @@ app.post("/process", async (req, res) => {
   res.json({ success: true });
 });
 
-app.listen(3000, () => {
-  console.log("Boomly worker actif");
+const PORT = Process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log("Boomly worker actif sur le port", PORT);
 });
